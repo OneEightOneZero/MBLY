@@ -22,6 +22,11 @@ export default {
 
     Tsettop
 
+export default {
+  name: "app",
+  components: {
+    // HelloWorld
+    Xheader
   }
 };
 </script>
@@ -30,10 +35,6 @@ export default {
 
 /*#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-=======
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
->>>>>>> a0c58f9614b25372a5e149a4425424932da17614
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
