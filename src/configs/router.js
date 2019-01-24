@@ -14,7 +14,7 @@ import Tuserset from '../pages/Tuserset.vue'
 import Tmyself from '../pages/Tmyself.vue'
 
 const routes = [{
-    path: '/app',
+    path: '/',
     // 路由命名，方便跳转
     name: 'app',
     component: App
