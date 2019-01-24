@@ -3,7 +3,6 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Xheader/>
-   <Tsettop/>
   </div>
 </template>
 
@@ -11,21 +10,9 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import Xheader from './components/Xheader.vue'
 
-import Tsettop from "./components/Tsettop.vue";
-
 export default {
   name: "app",
   components: {
-
-    // HelloWorld
-    Xheader,
-
-    Tsettop
-
-export default {
-  name: "app",
-  components: {
-    // HelloWorld
     Xheader
   }
 };
