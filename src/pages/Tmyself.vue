@@ -1,21 +1,24 @@
 <template>
-  <div id="app">
-   <Tsettop/>
+  <div id="myself">
+    <Tmytop/>
+    <Tbanner/>
   </div>
 </template>
 
 <script>
-import Tsettop from "./components/Tsettop.vue";
+import Tmytop from "../components/Tmytop.vue";
+import Tbanner from "../components/Tbanner.vue";
 export default {
-  name: "app",
+  name: "myself",
   components: {
-    Tsettop
+    Tmytop,
+    Tbanner
   }
 };
 </script>
 
 <style>
-#app {
+#myself {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
