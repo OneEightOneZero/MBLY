@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <header>
+  <el-container>
+    <el-main>
       <div
         id="bg"
         class="header-bg"
@@ -26,29 +26,32 @@
         </div>
         <div class="middle">
           <h2 class="ellipsis">城春草木深</h2>
-          <p class="ellipsis">
-            <!---->
-            <!---->
-          </p>
+          <p class="ellipsis"></p>
         </div>
         <div class="btns">
           <span class="msg"></span>
         </div>
       </div>
-    </header>
-  </div>
+    </el-main>
+  </el-container>
 </template>
+
 <script>
-export default {
-  methods: {
-    toTsetting() {
-      // this.$router.push('/app/contact')
-      // 根据命名路由来进行跳转
-      this.$router.push({ name: "Tsetting" });
-    }
-  }
-};
+import "../styles/Tbanner.css";
+export default {};
 </script>
 
 <style scoped>
+.el-main {
+  padding: 0px;
+}
+.m-avatar {
+  border-radius: 50%;
+  background-position: 50%;
+  background-size: cover;
+}
+.el-main .profile .follows p,
+.el-main .profile .likes p {
+  font-size: 1rem;
+}
 </style>

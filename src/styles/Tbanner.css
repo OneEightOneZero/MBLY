@@ -1,23 +1,16 @@
-.user-profile-view {
-  padding-top: 44px;
+body > .el-container {
+  margin-bottom: 40px;
 }
-.user-profile-view header {
-  position: relative;
-  color: #fff;
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
   text-align: center;
-  overflow: hidden;
+  line-height: 18px;
+  background: url(../assets/timer5.jpg);
+  background-size: 100% 100%;
+  position: relative;
 }
-.user-profile-view header .header-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-.user-profile-view header .header-bg:before {
+.el-main .header-bg:before {
   content: "";
   display: block;
   position: absolute;
@@ -25,37 +18,37 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,.6);
 }
-.user-profile-view header .profile {
+.el-main .profile {
   position: relative;
   z-index: 1;
 }
-.user-profile-view header .profile .avatar-wrapper,
-.user-profile-view header .profile .btns,
-.user-profile-view header .profile .middle {
+.el-main .profile .avatar-wrapper,
+.el-main .profile .btns,
+.el-main .profile .middle {
   max-width: 414px;
   margin: 0 auto;
 }
-.user-profile-view header .profile .top {
+.el-main .profile .top {
   position: relative;
   margin-top: 72px;
 }
-.user-profile-view header .profile .avatar {
+.el-main .profile .avatar {
   margin: 0 auto;
   position: relative;
   width: 19.2%;
   height: 0;
   padding-bottom: 19.2%;
 }
-.user-profile-view header .profile .avatar .m-avatar {
+.el-main .profile .avatar .m-avatar {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.user-profile-view header .profile .avatar.verified:after {
+.el-main .profile .avatar.verified:after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -66,8 +59,8 @@
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAA/CAMAAABggeDtAAAB+1BMVEUAAAD//////f3/////////////////////////////////////////////////////////////////////////+ff////////////////////////////////////////////////////////////////////9b3X9fXL9eXP9g3D9j2z8aXj+qWX+lGv+nmj8ZXj8bHf9h27+mWn9dHT+r2P9cnX+pWb9jG39im79dnT9gHH9kWz+tWH/9PT//Pv/+Pj/+vb+smP+oWf/7u3/8O//3uD/5ef/uWH+xMr9fHz+o2f/6ev+omf/0NT/5OL9lHb/9+3+2t3/4t7/3dT8coH+pW/+1dn+wcL+sbf9nqj9gY/+ub39ipX+lJH8bH3+qnf/wG7/79v+ys79qrL+vK7+tKT+qo79hXf+t2//6eb/7+D/19X+0sj+vML/48D+vLT+pab+vKT/1Jv+qJv+nZv+o5H9ioz9dYT+t37+oHP9jnP/1c//z87/2b/+tbz+ybr+s7H/2ar+raL9kZ3+nor/y4n9hob9fIL/xXz+nnz9kHz/vWX/69D+zMf+0ML/37f+rqn/yZz+sZX/wov+kIn8eon+lIb9g3/+wHv9inv9dnr9knL+n2/+t2n/6Nr+ycb+wrT/0K3+rYf/u4b+ooT9l37/0Ln+xa4p6xFpAAAAJnRSTlMA+P3ujhHeBvRQuZduKyPp4qJ6VDv02NLLvZtDMhoXsT+yS3enrpImJgUAAAZoSURBVEjHtZf3W1JRGMe59zIFAUeWoxzVdWClWaZS94IywghEwGQ6cu89cu/UcmSuUtvjz+zce4jDBYR+6fuLz+PzfD+845z3vocXVSJ5ZrI0+6qQwDCMUF7NliZnykW8f9SNLMlNflL6tTQFgeE4jhGKtGvpSfybkqwb/+AWCVJlSQqMpGktEk2TmCJJliqIG0Si7DYhxkjbp/mv795PT3d3d7ecvh9d3mu1kSCVbFliTLc8j58gxG29jPk7MF9UV1dfXLScbq6PLg+22nBhAj9PfrldkJIhxnHtp1/TzY8e3WH0EKi6+smTJ09bNvdatSQuzkgRXOZOTBBiZO9886vz5zU1zyDhISMAAIQ3LZuDvSQmTEiMSrgu4Suv6Pt/H5yX3QN6DgCQAPwwhKdv1pcHbVeUfMn1KHVPlRK4ztG5dbesjAXU1CDAwwDgacv6WxtJSHNEEb+eIxTjjpG6s7tAZRBRA2III4AkRt+ShDAnLAKBRCqmrB0/VI8fP4aAeyyAGwJL2BxttYmlEgG37XwCty6eqYAYPyLACLgh7PWSBD+R8/MJStzRMVNRUcEAYAiQELURIAVlQkgA8hThFV3HWmUlBKgQIGojQAq2K8IUdJDyMjCdo67yPgNQsWJSiNGIlrc2LCMPJS8m+ycq798HABRCzEasD5LivyUQyRLwnvZtYA8hxGlEy3IvniATweLdFtI7Y0VFRRAA/XEaAQKghbcF7LhIJXDNcVcRIxRCvEZcnGpxIpUZKFkyMWX/oC6CQoA4jegGp0iWBfySW5i9satAXYD8M3Wsgo14BdTAKLQKe63YLQmoXrKC/HxYAPxqdSCEsX6Kke5giw1h60BHaRn1zjeENOJ0kFTcFPHkfEw/dFIABPxQHXaSkXaxk61C56IGZ/+hdzSENKJ72Ybx5bzMJNywXwjsCNGuIxmBE80WYcRKQ+k/NYQ24l0rmZTJS06nG8cLCyFBzQLGZuHvUV9UoIydu5QGyjFyHtqI9/N0ejJPeo1e8hcGAQUAMPGFZv304s/KirN2BwWl//WN04jvX+lrUl5umnZ4shACAojjFS3rZw51Zd2sVQ9lHeHeiOl32rRc3lWFxn9SBewohK5jCvrtQzM/J4w6KHN7J/dGNH/XKq7ylIRmsvZBVVVVCOFDDwT09M+stRvNrIz2zi3ujWiY1hJKHoFpNmofAEBICF19elhA+/bYnNXIytBXF3YjGpq1GMHDcM3r8vIHHIJ6yE5CwMSQIaDPHWdhN+J5sxbHkD8kB/XKLPTTQzv1UC/a11ThNwL588tZRBDg34F+vK/vBdTciipsNEE/m//HfARgpR4KdEBnsLCa21+LGE3nbP5CUH9nPhAniX1roACGl6xMa9sRc+HVNy0hZPrvew3s3BCGZ+ER1FhNrLzblRGjaesb0//cNI3bU5ofRvAvQT9pfNkItDQWZTT9GAHnjzn/Ll8pBKAcNsY10G+2DAwMeIePo4ymzt/g/DP3b2C1FIgTQu1kwK+v93q9rvEu6AdC34iDXXD/mPtfP1xcHAGwU7CAxgWXa/xQHWU6jtjB/Wfnj8tZyiEAQO1cDzxB+gVX2yFnvEKCqu6LHswfdv6ZPMDPzaHKayBhBxbahrvUwemGcvixSxLJInb+GhaaihmFEKrG56CfNrX51cHRhAgzi3Ywf9n5j5ktzuJwwGQjWwBc43VvBEcTIoC5osNkWfD7QxmPmkqgP0j4uGRk5h5lbvPXotEU9M/87KHg94cnyBXSptWSEkAAQoBaKDQXON+IXVqYKwh+f61tUwFAeCM4oyno327vYb6/6Ptv8hWXQAKnEdzBghAT/fD7j/YPixPYUQiXEWAjPjh0cP9A+4/Z7SlhFT+HAn+Hjtl/uPvXC3cTApRGSQKN1xUHDvYvUdj+ZxgAAFaxc1A3WnGw/0XunwaYQuxGFByuWCm4f0bsvxY3LGKsRpzs9+FiuP9yJMoB+7fZ4gPnIEYjTvx9Zhzu31H3f52pbfWyKoChML60owP7f8r1y98fVtORM2ojyj/Wbnw2wvdHrPcPbbQseJwRIbye9FqMdKz3D5BcAt5flNlgcrlXfZ4pZxNwNzmdHt/qsMtk0FHg/SWRx3n/ZRMYBsbmQJvb5zmampo68vjcrsZ6Pef9F+/9CdKgNUAURTF/aBpH78//+f7lvr+V8d/ffwBTj8QlmguulwAAAABJRU5ErkJggg==);
   background-size: 21px 21px;
 }
-.user-profile-view header .profile .follows,
-.user-profile-view header .profile .likes {
+.el-main .profile .follows,
+.el-main .profile .likes {
   position: absolute;
   top: 50%;
   margin-top: -18px;
@@ -75,23 +68,23 @@
   line-height: 1.42;
   color: hsla(0, 0%, 100%, 0.8);
 }
-.user-profile-view header .profile .follows p,
-.user-profile-view header .profile .likes p {
+.el-main .profile .follows p,
+.el-main .profile .likes p {
   font-family: SF UI Text;
   font-size: 2rem;
   line-height: 1.2;
 }
-.user-profile-view header .profile .likes {
+.el-main .profile .likes {
   left: -31px;
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-.user-profile-view header .profile .follows {
+.el-main .profile .follows {
   right: -31px;
   -webkit-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
 }
-.user-profile-view header .profile .level {
+.el-main .profile .level {
   position: absolute;
   top: 23.4%;
   right: 0;
@@ -99,49 +92,56 @@
   padding: 7px 9px 7px 14px;
   border-top-left-radius: 28px;
   border-bottom-left-radius: 28px;
+  color: wheat;
 }
-.user-profile-view header .profile .middle {
+.el-main .profile .middle {
   width: 74.13%;
   margin: 12px auto 0;
 }
-.user-profile-view header .profile .middle h2 {
-  font-size: 1.6rem;
+.el-main .profile .middle h2 {
+  font-size: 1rem;
   line-height: 1.375;
   font-weight: 400;
+  color: white;
 }
-.user-profile-view header .profile .middle p {
+.el-main .profile .middle p {
   font-size: 1.2rem;
   line-height: 1.42;
   margin-top: 9px;
 }
-.user-profile-view header .profile .btns {
+.el-main .profile .btns {
   margin: 9.06% auto;
 }
-.user-profile-view header .profile .btns span {
+.el-main .profile .btns span {
   width: 26.67%;
   height: 0;
   padding-bottom: 10.66%;
   display: inline-block;
   margin: 0 2.6%;
 }
-.user-profile-view header .profile .btns span.follow {
-  background: url('http://photos.breadtrip.com/default_user_cover_10.jpg') no-repeat;
+.el-main .profile .btns span.follow {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAB4CAMAAAB/yz8SAAAAnFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+TINBkAAAAM3RSTlMAU/0p9O1Knfp5GKHfc8YTB7obsmNsNqbwwpkE6Egt43xaDMtAj9KsOYJNMx/a1YgmlUTdFiL2AAAFlElEQVR42u3d2XqiQBAF4MMqEwn7pizuu1km9f7vNskkYxQFMTE0I/3f5S5fSRdFU13gYlYmDLu2MdcVjf5DmqLPDbs7FDILP0vyF7pIN0LUF76En2F6YUI3Jwk9E1dmCe5/ueiq0FzBwvVs+grdtKgf4DqmNrWAPcX3pT1qCUPF9wQTapHJEl9n9m+mTqhG7Jv4Iu/G0/opioevcFqTrA71triY2sLL6p2yxmXip5ZlqwOzGBdwDGo1w0Flkk4tN5BQUdDadPVJWaKSVCaOZBUVjG52e+Ey2ghnpTxWHzQVZwR8De7IS5SSeG7fo0go4bS+Zjg0cFAobnktesyIUeSJuJwZCqhtfh4sIK5xksOT+wmKg1Naun91Tg8neMSd5OGIyRdhAcVEXp+4An3kBPxOWEhc4lCr3g9eaoIDKXElVF42VGdgz5S4UlN8akWfzHfY2NkQd0bAa6wv1FqWQjWLbMoRX3yDztN+py6xEFl4J1DNwnHco0MuEOYDc/9ARzYIiAkB71yq2cA82g9SYWpHO0njBeW5rO5GLv4yNaqbnb+cdeD++PoDfO340kqJBc1ktjfzC+jk/j5ecw8bIEjo0ALQiQUPb0Kqn7aBmdCOfIcXOiaPgGf96BceEgsh3iTEwAQY0c6w6El+BTiPdOAejkgMJHglERP+XqYejDGi0zoxzDnte/R6IrEgAfCJicgZz+jDCJZOBcI4iMhVi6ypNj6ABdVIlHd6uvzBAHz5H5Fy3IhohiIx1WaBmu8tDzhnQCe4wqcNIOyh2uiAJVIZhsGS6aQuIBILooWM6hR1DmXIOod2IXLNsFnBogwCsZQiLXkB9UtsVLAERhXe+WDR/BlYR00K1hBdYmmKNRWJVCBLGhSsLmxiaYMRFRJ9QEqaEywbBrG0La+JV4A0aEywDMyJpTGG53rJhMYEaw6dGErO7v+vMqUxwdKhEEO98/uecnNylgKN6tP5lbMGvF95HfrQsAqetFqDlaKKlI4NhJ0AEHaGVCOt1mU4usvBq/guZ0THHnHakmqkME3wEyCAlVCZ36NeU64snWnp4MPSx1hRmQzTpuSsOcuiVDMhkI+7qLzZJ2xKsAyWjzsdwKXBuLSI92BqTQmWzfBBWnaw1YhWiI2yFgO/MaVDF0NiZfjeOCBLcAYljzvzxgRrCIEYsS2o9OZxXHwkNEPQnKJUQEZsGOPd+68QWEZF6b3fnGBlsERiYTJG7O5qKSAb0AkjjKPGBEu0GLVZzCwgPEhNpn3yXZDXnGdDHcCCapeoQNzJtxfdy8d1Ax6aE6wFi9f38swEtkZuWW6BrUsH9BjrBu06+PU3hmi/HQCjiHKUEYBpL/ffGQ0KllR3y5G+2gLIXDrBdQ5HVyYWlh8L4H5PCtzvWVFNknqb2aLOFK+eQ5FOkldjAM8zhf6633W7eijmUE3CetskH2MAL6FIhRLf2g0BUMaQxI/SWSr2QjXxam7AHT6vBlROWd1JGr3RulmTDjNoZs2t3SJVoH3Gs0kHRl28E4irfGjAiog7Q7H4QacvHCoPiDtjww9nVmbzY7/VTbGHD866YB6NSlyJlA/BqGyCQ8smVcsNIwZ8cE9lfT4SqjLF5MPGKvP4GLvKenxA4ncHJGLN74hHRBUFZsTlPPFxwdcYFwxnQNwe3eEjzqtSJJRa8uH5O3KAM1T+WYYPWso/+FGVNkIFKl+Jr+QUlSx5liclQEVS6ysIXeIfVqvKcHCBuM1PPuJTjMusW5u4FBUX27Z0f6vn8A/YVqR4+CKz07IdLrFv4uuWrXqfOAnwPWprqoheiu+btqLHxp7iOoL+jfcGRv0NrscS3JvdjNBcwcKVmV6Y0M1JQs/Ez5D8hX4z1YSoL3wJP8vKhGHXNua68l8uTE3R54bdHQqZhUv9ATFr31ArNKN/AAAAAElFTkSuQmCC)
+    no-repeat;
   background-size: cover;
 }
-.user-profile-view header .profile .btns span.followed {
-    background: url('http://photos.breadtrip.com/default_user_cover_10.jpg') no-repeat;
+.el-main .profile .btns span.followed {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAB4CAMAAAB/yz8SAAAAWlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////9ZMre9AAAAHnRSTlMAgAN7MFcqJg1rEjQKBnQXd0NnYRtbcUYfOFNQQEyEqz1WAAAHMklEQVR42uzb7XaiMBSF4fMmyGcQCIiAev+3OTPVtooGdSosKz4/u+ii3T3ZJHQpdzONV3SlXeaaX0nnS1t2RdIYGZWq2kXNy6gXbaNkFGGy+KWzNEQvklAezCQlB9p2Wy/IYpMq+YVUasIs8Lad1RyUiZHHqTaaD/UmyX5lRJeozNvUfNCbSh4jKPlQtrG8nLj9/O18JT/mR/xj21BeVNha/ol8+ZnGfk7pSzv0jG1+knkHoIuXHapvYaEBFrH8p0QDem1kFsxaA7pV8h/iEqCbwVSdLqQylrt5ORA1MitVBGhP7qN2ANuX2VPdSm0BNkruEFogevFH4MBw2VBuli2BLpVZSjfAspIbBRpoZbYSQAdyE19/XDtjjQb8m7IC8lnWVa+HvNuyql/wxHyfuAb8W/oqmtFGdHA/EMigTEP9zuqvsAadDV6xhHz2a3AvXsIyFCdlQc+8209XmVXisgNmvWc41QAbcfDmvRc9l7g3EHEOnbwd2YCO5ZISopmeB13SCErlmLl3ufdUl5sp1LCVt57txYXYQTS7d33XqQgWlx6TM3uH7HI9GPt+Ejp0YOWED/p9JLwo1ODLsQjW8nbRutfmAeiZ/C/1fqY3WuV7sAYUUMqX6t1Y11qrOj4CbeTN4TQfo5/loGMC6VHlrpLrVLIKZDTVUaUnYOUZ+DmZnArA7wezjuVMhJXxWEi+672VR1PXyLkwPztyrch7X1Ercl/6klEPIO1XxYdAKI+muSKTcwEUciyGtfR4Gtb9rNOclYygH1FyiO0JwpJ1rz0LiKUvi8CG8k/vytGUn+twAa08XOAPKRxhKXuyENPlxXkxC4jis+d7IaNpD+8elIZYJhY4wpLqZN1tXY/pLSyz/vO9VjKWGLTa/3i1TMwdluygOZqWzv2nzjM5lu0aGU8N1f62G5maO6x0qdvvYdGxOCRYI8HKSR5rA+2+shKZiDus9EsTpwcV7NJP0hcYkRYneaxkX1o1ZDINd1gx14RyQbD4ZmFxRB4rg1rEgFYyhiCKwjHCSuUiD5SMRmkw0oCVUfgQ3xqW8U5FRN6p9Otbc98d1ngsNOJBJ3uTh+W2wtXQJodCTR9WB54UsJW9XxGWVDWs0snD2kKxT2zvicIqcTd0WII1E4e1X4ElBPLhmcKq2Q1//CMKJw4rgFLsaDsHHyrj4F25qx7uhgKicNqwMrCyHO1k6DNgOCwDiVxJazFtWDHUkoORvecJK7vaDWtrpg3LQC4aUhmFD0nglg4XRCXD0ok7KwUt9O4xXsG7eUXPCnZFnyc9k4algKcI6097Z7qkKAxF4ZyEJRA2WSJBfP/XnBqnNQ4mKF2QtiXfP0us0kuIN3c5t8MLGD0vbjkbHsjaUACGx9C9sYZiAv5STBiMm5uZhqxNDrBtN/j023m65tmHxdC7Wll6g5f6W72NsY5gXD4JSSZonLsO907puxiLVgiJmP90D0TOnVL3xx0NLa3/azGhEsNsmLeizo877g/SGg7ZGqPwkPRJjjljOLs/SLsP0WhKszlGIP6XQqzKmTxe6T5E4z74p+mNF/QM3bWfr0it23v9A8E/92FlTWBy8Vp2y3+VFSS3mVn8QFh5krBwaqwR1aOtKiC+21ST1HybWf4TCQudCnNurOHR0VYMiP4zABNGn+fs+GxYAnLLJGsElGRROJR30wa/uAI6bkgPp46NJYBwy/R9/KQ6p5wYJlcVINvHgHsVPCys0GnUQafv+60KQ1JLr56u4AO/eykKAENm1B1q4mntiGtjSaDdsuSIJkB1EmbUMQE6bdhRAkhiYqC/vCVyXVtz3eui4x0dcP9yXPvGM7pNMZv2mGaRJbmQBw0AJDbxy1wVAIoxu1UHxtclZkeSNVFAqMskNyE91UVlQXZjfh+U6gJKrORKAhivJ53k6nskdtb9SQ0gjAW47jkkI39a6C6/6idpUAviDm0iY2m3e+hLF/HJ9Q5RQPNuTQNvSw2It2tHeVMu7Si+0en1RiffQvedFjrSAAfisXD837eKfNvvfNtvTDTUN5TPN5R7qYIFUgVeBON1EQwvr2LluWFCL9xjgiamRy71klAmRvNmrrzY2CMtzBkK6mXszDJ2xETK/BFxwmDXuA0ua85zQ81pd5+8/zDJ5eE8LxdcEs+FVssFW4WoCy9EfdO4LbiXOF8ucW5/TmtvLcITgMV+LMM6Yxm0A1HsfJdvqyXjUdiuPYiYASx69dp9e6cKSwYPtQWA007Piflw2Yf8YLU1B6tp6GnPI/vOlCwjYDtcXH0CoAr8mNEtxoxqqNrjAFtBvkka7m008sD90O2Xh277ce6bj3PX0Og6Sl994Pk6VddfF627SgF5CsqP8b1oKU4SWH+fyUSDL1g9jEFc8iz/lWajecbLOBiHmuGLRmRkZbgIGT4OFgpONoH2KpT4GGSoWko2JevFYWjqovql64xVRd0MB9Evf/b+AIk+XwPoJmKhAAAAAElFTkSuQmCC)
+    no-repeat;
   background-size: cover;
 }
-.user-profile-view header .profile .btns span.friend {
-    background: url('http://photos.breadtrip.com/default_user_cover_10.jpg') no-repeat;
+.el-main .profile .btns span.friend {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAB4CAMAAAB/yz8SAAAAWlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////9ZMre9AAAAHnRSTlMAgHt4BRoNRxY3JGcuXm8SVzIJHnNETWtUUCk+YlJDgyktAAAH2klEQVR42uzY27KaQBCF4f6bYSKMnGEjCu//mkmhKRMDFhL3hQzf9VxNrW7WIC8rq6IZElcHykfSoHbJ0BRVKd/KVJe8ZjPq/FIZ+Ra2yD80S89oXlh5s7JIuFE3NEUcZqWRj2RKG8ZFMzjlJilKeZ+wU0ZpVxxkMw5FlzLSrpL3OPeMkiiTzcmihFF/fsdVtQC4yMpG2cgB0P7vdVXumtJQNu22Z1wl69kTgDabDdWdbRQgz2SlSAH9UYoXykYBjWSNrAc4eZCq3+wA0K8I1zEA2kq8UrWAHuU15gug+dDeuZ65AHRGXmAdkG78EzgtbAFnZbFDDQzexerKdEC9OCixApF4KwI0lkXOOp71WKzAWRY4AoGX6+ourIHjglwB6QZfzK/JUuC8JIGtR0X0aR+I5amDQrrf1S82BQ2fnqgh8H4Gr7IaaiuzjAP1fLffhQrOyJwvwOvO8LcY6GTG0e8u+q9ovkBkAQyy+0MHmsmUHlJP34NzTAv9XOb25f4gnN5MVqGR3YPL5CCeoN2HcHIQc3lQAZ79Q/7JrpnopgpEAfSeYS+MLIJYsf//m69PS0YBlcaLIaknMSYmghxnuctMM0dMCnt5M8EXpKNag3mnhJOEZlh/aCGSN5M00A4H1h/ppf6eajC0ju+w4Q7NVWQavFesR6tWcJkCfcraCONwLXHfpZ/KrDHRiaCQX5JYm4g+AW5JLyGV1WGhUfiOCimU/S1WWcbyIHOH88aEMqaFUhYgASsnQmB9y3sIxC7nGPMhY4z7WBWnqISjrI4PMP4vZVVOsDK2H7LFKmdhd7mQxvaazXTaHwOVLEHys9v4BnJ5GYGNZA572MkNcs/tlFnkKIBomicHXP4zzrewkZcReDPDlBaS2x07V3srmMVBnmNzHsrd/YhU31VdPYpGvwmALD4zUTQxsbxW1id057uVsjjOlRc/TMWu8e42qMqdo4bjbppYnqM8T/xaYQdRcDVbVgZEN0OzgyxDDLVIBUYUUHMlnfcNYP6/m+GKWnKzu5mz4FZloJKtQq6j5spRQ/Yzjo5DV9aXSQ5L/u8pbKVUaEPru4r7kLmDYnD84Og/rjvp8wWlNAq5p7orSaDtf2MkjuxeSdfCTpbi5OlkTAFVV1L0z51Cdy3Lk1t4Sz7KaQZahdzTz5VduX3NwGGmrBCw+zGRVq5qJX2+8FfVNLquAqDqBeQzZR2YptUqAKZSQ/78dYg0Xbks+gM8mSnrc1FZOdTiKSTqBRApunLdpgSOIt2mpwY2PeFo6u7BlNklLRSiQQWeGPDlSXxnS8WVK/ztT9dtmCQcHUqIh+WmQO3gpw9GABEdW1quJOnDdt/AdqasBlrZQu2Lw0IrOgCnl5YtJVeu75BBLSL5v/audUlZGIaSUhQp1wKCgu//mh+hsBVGVrRxPlZ6fuzuzI63M01MmpwkGFGirGgEf9CBIABO0xg2IyQLzZCMLRqu5M89aITPuc7BJ+pB4eRoqYsvMjNUDp6MLVOutHzIG3yXt5KsozqEvLg7WqHyWGQOXoUOdGwZc4VooEOjk54VZCVsePFGa0SSQn0VkoUOKiglZMuYK0QeYzR+wFxnJVmXMXqV8Wh6h1jrSWiCUpXuULJlzBVC4lO5SMA6snwAqLWKJBq1NerVqdIdlUiTsmXMlTZFEM46svCFvclVKo/QYdEm0urqgZYtc64QgYtkyVVkeWi1EwnSqcYfxFc0ijFitii4wqbqDrG/hqxoUormLfQ4Ul/+qWtlaraMudJ5Mbs+JyuYMYOySf1FSHetrAoW5GyZcxXixy0BVlz+JbNiJG8YdKiIPJYuWNCXwpAtUZly5bOegEyb0yJZXEyVbtcYEHRTh3QpjL7IytNCCuTK1GHl44iF869k1ZPimB/1ru56xl+s4XRfhulHyvf85AgzrmQ7mJ9yfsFvZDVwJ/1LzjBOHMqryWw6gvL9pxpDjr7xVIXoJ1w7TTJAd+7cf3TdPGsB0fr3rqs4qv+SNIZwBrAtwb1XwP1wif4PjujToGru3Ac3kg/zQd1sMi8NUTWJQ9BytMVmtoA9iEYFjEjn4Q+UQyKIKJrJA8MIFGqaZjYnwyO/IYSPKvQljMjnkyjOuvWoDbkzQ9L0NIaOEVqAbJsNuEeo+QPZH4KJucMOhjPjLw8IDWomCBpwN9ra/da7CaSzCJmYt3ZvWjSwJaBoYNNylA2hl6NsWui0ISA/VkL3goTOijPXizOt7Pc92a9T2aP1m/CxsqMK3h1V4Ag7DmpZRCTseJUFrCEmtYN7lq5s64fNAo1jMUOJztwOG3t/2BiitYY4B4+XRBsJsyniDDfsX7KjN81GbyIudqjrvHB0tuOCDccF646KYlt1sf+GxH3WOOjZEef3I87953YqLFvOoQJggV3LQLOWQQcQxc69vOeurctewa6SwY5Du6SIdEmRbmO57DRP5Df0Q/6Li1SqXTouL345HuAX6NDs7nDxEjqcX/3cIdvrMkg3fHfN6G1HAeq4ZtRggW25k+qrPL6/wBaRpHtbjVwf7NLt1Uu37Tp3+nXuy7i20CM6fWF+nZwi6NFSUHXfYg7xJfOdr4GfXWIAej8jswgGMHErs8A7yD8asXJ58IKsvAkGA6JMOsQ4ZCmDrwNLsw85Y543aQFfgyJt8g+bh8y7MxyJwv2j54y5hYg6T5K/bnv/AH6zWsH1rLojAAAAAElFTkSuQmCC)
+    no-repeat;
   background-size: cover;
 }
-.user-profile-view header .profile .btns span.msg {
-    background: url('http://photos.breadtrip.com/default_user_cover_10.jpg') no-repeat;
+.el-main .profile .btns span.msg {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAB4CAMAAAB/yz8SAAAAn1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8Kd3m4AAAANHRSTlMA7NHgxKf6yodF9bISBi5ntU11HNxUNZlivCVJKdPBxucEfGsMohbYrUAC8I054lpxkoHMIWYxwQAABbZJREFUeNrt3dd2qkAYhuFvaBZAkyBFJREQe0v57//a9o4aowgGNRkL85zusrLexcAQhgFHM2t21HtQJJlpdIM0JkvKQy+yayb+lt8dynQ35GHXx98wPDWguxOoXh+/zLT1mxx0eWi6beL3OC6juzZxHfyOUZMKoDnC+doKFUSnjfM4JSqQjxlOZ7hUMK6BE3l3flpPwzycwnqhQlIsHK1dwMNqhT3iOGGZCmwa4ghWYeYL6ToWcvPv6G75NHMfOTmFPV19YzPk0q6SQNU2crDv9tcLx9EWOY4r0WpNa+MHjhiDG9UZDvLFuX0L83GAVfg5w665hUxhweei+zohshT6HifdFBnaJOx5RCpLnNxTMAtpCvr7q58oSOGRkMrDHkMMwgzMQFLhnk3k5yLBISHTDLsK9XzwWCUxxTpCG9vEfU7+6cOIhING+FaIdTLnaIpL4REcMcc6Ya5lMrqseq1LP9JGtkoXMzGxYhMvUvp6rwoe6UuHMqiATpdjY0UnTuYGwimt6Z6WEkvFbJJ1QbLognQsGRrxMjQ2y3OGwOt+LK2FCm3R2JcSELEdVeJJ63P/3UxQAazVSFsA+l6st8SNl4RsT8SVh08q8RQB8TJStQZDTsSa9GHTlcZS8SkgrvQYY5f+G8QYJWJ5CJ+TsZRqqhbvWAH+84kzyQKi9dzF3YmlA++UjFWiVNxjkQ+gS7zJLUTrC1wcbMVifTja9cbqAhgSd/M3WmrE8LZiPSEe0PXGGgKQ6XLcaXV7GKoq7cey66kM7rFkwKTL+4y1ca1XQyITNeKnXgloQyttOJiVNqqJWN1yKoN/rBps4sYF+s2tozqddK3nLLIRET/lEONIu9lYEXrEUckCKpNNrLfnpN41x+rhgXhiFaAWfMXSKellP9b0IZXFP1YTCvH1CrQGB2Nd7dWwA4k4exujz46I5VRSxfxjSZCJt17oZh9Z13zOksGIO5luMxaDRhciA6GZFF5zLI17rBuelGpgxB2T17HcRpK6H6tVS2VeYhjKxN372L7JqYMMiXjT+ujmjTVRs0nEmQSFeOsBg4OxrpWCB+LNQYVOiKWVWwO6qAf0iDMF0NexykrS206sYHUleH1tEBGrwdqqNX8sE2c9RMSZjVbeqcPr8q92gOb6hbb+YOvPxrwHRQSb+JLHmH7Fio2keCeWhe5WLApa6Mu0pjkwGsSVjRrx9YSY5bzdUQBlOxbNLfiTTXUDjkY81WASVyyGRzljdWHRTiySYlQ0oqofBUQ672eeJu9HYU8YP+eN1cdTIhYN0Wos/2lz+X9BJ34avB+yBjEWlDNWD5CSsWhYXY3Pweq01WfEzZD34/suxoOcsaoWRpSIteZiXF2OyhA2cdPlvDBkbmJBh2I1v2O9A6WMWN7XDx3xHIg+5yVHdYwHB2O9AY3NgLVp6QOY0rZGjPpmoaBPnAScF7M1QiwoNVa1p6pDXZ8aMDVa6m26TgCjXt5492JA+Rq2zoA4UTkvk1ysA6QcWX2svW5GZPR9PCZ1iT8Pn/oacSJ5HmXEWuBT2HrXaJ9af9zivX8Qf5rxvbSbP01RGN0OHSs2CblfGjAnJPyAmeJFp9xc8Qpdfo54OTO3pnjtN7+ReKE8N0VsVZBfW2yCkVsJu2YkZHLExj25uWJLqNyYITYbO3qzMbEfzc9exAaJ526QiEcS9rSRYUpCQhlZwg4JO5QQmaw5CVtkS2xxnhfzcdBMbJ6/UXXEZxnO+SxD0kLUWtJs8SmZcz8lkzQTZ3liDnLyCz+DkH3kZhV8dqpYOEJY6DufcojjPBb2xMXaWBLfOPzZi4VT1At4cDFPfBo5L9fA6WYfVCAlB+dpF2YWobRxvlEh1tg0R/gdjnvnawMnroPfY9r63f4yQtNtE7+s76kB3Z1A9Qz8Db87vKPPRcrDro+/ZdbsqNfsPMvsJgemxmRJafYiu2biWP8AqvItqSVEVoUAAAAASUVORK5CYII=)
+    no-repeat;
   background-size: cover;
 }
-.user-profile-view header .profile .btns span.chat {
-    background: url('http://photos.breadtrip.com/default_user_cover_10.jpg') no-repeat;
+.el-main .profile .btns span.chat {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAB4CAMAAAB/yz8SAAAApVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+4/eNVAAAANnRSTlMASPur7N9qGxJTby9aCBVVNcZ3vrj0molZ6MzUhfjDJowpBfB9Yg0CsjotoWWmTOMfk0Ct2osFITngAAAH2UlEQVR42uza2XqiQBAF4EML4oaKghk0aFxi3CImcc77P9p8CUYE2y2xk2+E/8oLvfBYVBeFuJg1K47mjt0xdJ//IV83OrYzHxVnFtTq53OG4I0Qxlu+DzWqj88eb473vKjiyqzi5GYqKklMahaup97SedOGrTqu49VhCjRf8X1alylha/ieepsp0p7i6wotpkyrgC96vPG2LqMv8BVmappVXHeFi2kpLKuQvsRlBndMsYcBLmDaTDXbxNn6BlMu6ONM9dS2q4g+xVk0lxm6Gs5Qu9n1wmVEBSdpWVYbQsMJ9ewa3HKnOKqf9fYdeh9HmKmfGeICEwcNUj6L7rMHOCTV9zhyDzhAY2bPElJm1twldBMyKd1fndKFxCMzUgvsKWQX4QF6AUmpezZxvhYS6swcNEVcqp4PXqqdjVgX0LKx4Xw2drwyc9QrIqn4n8x3NLOj8AL1H52x/st/60pmLUunch1UHX4wgtPB6jxt2fAY8XOLLhUaWggVqYptCIZyQIfv1qbZPh7ry3Jc46dSo0kp7wklRsRK8SlVRGhCRVwLI4ZGGIS5OWNYb5QSxmSkFWK1HgAvlHoB2onrxKZCE3yoCiryFn2hImYMdVZ7K1m347RGlbKFD4PpyBZRBAalpuiR8dKqUCFRVbybeYTJjV70VfQ6sOCuO3yytPumGyv+PqUC4J4x97CGVGiBd89UpboNxX3CXezJeD4xxVj9Zf5BQ5kxYowGpe73Ss4b9NpU6BnvPCrSjtphF2hySywR685u1wu7eTKsJtCkjF+FRuZiRrkYwevyAKBPVUaw/G0hPLmM+BoSJSMPq4GxODT2OCSOGfLK+gDyVKUcDSXLRAz+FFP/dFgzFCkjeijzp8PKA8hRkQCYc6OQ/E28inu6sgKgRZm3sNOKY3htbwAMKtLCk8dQR3aMnA6rBQSUEDOsBH+aAViCiiwx/rMxBbQ/Es/HwyqifGgg1fjjhIUZFfEtnNTgB7sZKqLXDAUk6R8YHPTCT4cVdVBF1pWtGlCuyGwqy0TSy2Zw6MrHw52wSkUJjyoUMaJ6k4N766NhlVAQ3Nd+2g1rBok1VRhhTvVqMAWPCIwP6yr6RmgYDjY17nN7qL5GYT00JHSqMIdD5YYWSjyDA5Tjp89cesMJp/YrPcuBTeVaQPfMldHAiX3Mk96i5fk7YdnoULkpTJ7BGwCwoliXqH9ucLi1HmPm/lJYHRhUzQDKd3sCJjVQxWo1bjPkjzeHz9za6XhzFAzuhuXkJFyqYECnaveQsZkQWGYe5bZVXW9S+HyPvbt60K3317VfOQ11+FTMNwHM6jE9oM2EBf6WUGYLPZ3vStsVrolHbnUZD2takFATlv+vvTtbThSIwgD8g4BoAmIEHcAlsrqPy8x5/0ebckhkk4RM7CIT+7tLVW74i8Zu+nCafVgHIMaYcpTy2s6NI/8cFv3AUcy/W+0imlBWQ8+sCfNhaOlYBYik/IgrpkfiA0bJ2tDfI0yedNu00uD0FcKSIBNbI6DlqwjzI06zS0/3/SQJi6YxnokOiC8B7/H4FcKS4RJTvooV0SE3vzRRurEGMVqXtw5P53/eYZlJUhW/QFgu60lpkAwhAZqTKZaei5Qjt7GjS1iTgGiSHakOYFaEdRCu+UEs9GESS3aUXL/dhu7SX5YBb1r6oEi38++zzNzvpQ6lIiwF1+jEgsl4Ib17nSM56ktaogAMy5+qLSgfVhft/AZkZViqUrRkFNYaATF0SLdT+xFUk8jaAUp51tqlQlgzhJRqAU5VWDMqGjMKK0CH2HE1tH16MVURj2wDCEXKcyCIhbB+5TdSpBjj5sPqYEXMTFa5CdKvGRABXSoJfSqEdYDn59fix+bDWkETiZVuoZrJ1gEItXZ3BBwL1+/5TYclagy3wlrAzKdUf4WzpfN+WJaGUakSoOmwZAAnYmPhIbugtTcxIJgGEIfye2EtAJdS/uB3DKXpsFoMtu/TrGIzvdwnDVDXROIhAryN/HZYCvaX+rZxZ4azedNhKcwKQ0wtU7NnP6lAvLGTP7oe4PWmb4Ql7qFYbmt8qW9DNAPs62Hpz0UCm7DmrEqOBlq6/nNDD4DgpoM/jAE8DK2KsKQdEOHVrDNeyOQCp2Zn8DazYrb5631lJR1AhT5lyd0IQPQ4uB4WEnuhO+xblFDRvR6W1y6KmIS1xdmGbm8br9Ni+7jnUJE/2gOI3avDcPbQC7aOVVg4PTT7zArZFeBOKbGAHvykq8yeF5bvrCpjqJMmwxL1tLSbGVOkSpJEOa7ZpyqyI9JFK7i8RV0vqMhdt+jmFkh0iKv90YDmE/cOSeMfk9c25J/Q1WfgYkDcm0z+2W99R2TwxllvmvJWBfUJvAlGbQ7ylsRVMnjjntqGvCXUZ1pCYUPcVSFvY1fblDdI/GyDROyIKxFQ4Zm4ghFvF3yLdsFo/yQuQ27zFue3aXEOLHnz/AvL4Mcy3O5YBuCRp/WX2ONHydRlCahlyZ/yJBmoaX73Mwh5zg9WY3GwGuDd9cpn5OFjdnf74JIEfNj+Tt9vTdv4F5s7vLmkkB+NzPBo5NTyrvYTHQOfI9zNLGIq4POOd1FjYx5xG8bwm9cG+kMDt6P1Ft/2ZYS46Gi4MX2ztenbsbehDjbmykn+NneYKJ+UOdjSVp1gbfZdWfovDw+YSLLbN9dBZ6Xho/4AVBzh45onxK0AAAAASUVORK5CYII=)
+    no-repeat;
   background-size: cover;
 }
 .user-profile-view section {
