@@ -6,6 +6,7 @@
         <ul class="select" style="display:none">
           <li @click="toApp">首页</li>
           <li @click="toTmyself">个人中心</li>
+          <li>登录</li>
         </ul>
         <span class="navset">设置</span>
         <div class="tools">
