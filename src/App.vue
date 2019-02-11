@@ -2,26 +2,38 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+
     <Xidxheader/>
     <Xidxbanner/>
     <Xidxhottrip/>
+
+    <Xheader/>
+
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
+
 import Xidxheader from './components/Xidxheader.vue'
 import Xidxbanner from './components/Xidxbanner.vue'
 import Xidxhottrip from './components/Xidxhottrip.vue'
+
+import Xheader from './components/Xheader.vue'
+
 
 export default {
   name: "app",
   components: {
 
+
     // HelloWorld
     Xidxheader,
     Xidxbanner,
-    Xidxhottrip
+    Xidxhottrip,
+
+    Xheader
+
   }
 };
 </script>

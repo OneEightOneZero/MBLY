@@ -46,4 +46,7 @@ export default {
 };
 </script>
 <style scoped>
+.weui-cells{
+  margin-top: 0;
+}
 </style>
