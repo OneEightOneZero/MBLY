@@ -7,7 +7,6 @@
     <Xidxbanner/>
     <Xidxhottrip/>
 
-    <Xheader/>
 
   </div>
 </template>
@@ -19,7 +18,7 @@ import Xidxheader from './components/Xidxheader.vue'
 import Xidxbanner from './components/Xidxbanner.vue'
 import Xidxhottrip from './components/Xidxhottrip.vue'
 
-import Xheader from './components/Xheader.vue'
+
 
 
 export default {
@@ -30,9 +29,8 @@ export default {
     // HelloWorld
     Xidxheader,
     Xidxbanner,
-    Xidxhottrip,
+    Xidxhottrip
 
-    Xheader
 
   }
 };
