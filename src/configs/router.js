@@ -14,30 +14,46 @@ import Tuserset from '../pages/Tuserset.vue'
 import Tmyself from '../pages/Tmyself.vue'
 // import Tmyself from '../pages/Tmyself.vue'
 
+import Hlogin from '../components/Hlogin.vue'
+
+import Hreg from '../components/Hreg.vue'
+
 const routes = [{
-    path: '/',
-    // 路由命名，方便跳转
-    name: 'App',
-    component: App
-},
-{
-    path: '/Tsetting',
-    // 路由命名，方便跳转
-    name: 'Tsetting',
-    component: Tsetting
-},
-{
-    path: '/Tuserset',
-    // 路由命名，方便跳转
-    name: 'Tuserset',
-    component: Tuserset
-},
-{
-    path: '/Tmyself',
-    // 路由命名，方便跳转
-    name: 'Tmyself',
-    component: Tmyself
-}]
+        path: '/',
+        // 路由命名，方便跳转
+        name: 'app',
+        component: App
+    },
+    {
+        path: '/Tsetting',
+        // 路由命名，方便跳转
+        name: 'Tsetting',
+        component: Tsetting
+    },
+    {
+        path: '/Tuserset',
+        // 路由命名，方便跳转
+        name: 'Tuserset',
+        component: Tuserset
+    },
+    {
+        path: '/Tmyself',
+        // 路由命名，方便跳转
+        name: 'Tmyself',
+        component: Tmyself
+    },
+    {
+        path: '/Hlogin',
+        // 路由命名，方便跳转
+        name: 'Hlogin',
+        component: Hlogin
+    }, {
+        path: '/Hreg',
+        // 路由命名，方便跳转
+        name: 'Hreg',
+        component: Hreg
+    },
+]
 // 实例该路由配置
 const router = new VueRouter({
     // h5history路由模式
