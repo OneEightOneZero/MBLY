@@ -12,6 +12,7 @@ import Tsetting from '../pages/Tsetting.vue'
 import Tuserset from '../pages/Tuserset.vue'
 
 import Tmyself from '../pages/Tmyself.vue'
+// import Tmyself from '../pages/Tmyself.vue'
 
 import Hlogin from '../components/Hlogin.vue'
 

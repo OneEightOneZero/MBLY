@@ -3,6 +3,7 @@ import router from './configs/router.js'
 // console.log(router);
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+
 Vue.use(ElementUI);
 
 // var express = require('express');

@@ -4,7 +4,7 @@
       <div class="nav-inner">
         <span @click="selected" class="home"></span>
         <ul class="select" style="display:none">
-          <li>首页</li>
+          <li @click="toApp">首页</li>
           <li @click="toTmyself">个人中心</li>
         </ul>
         <span class="navset">设置</span>
@@ -38,6 +38,11 @@ export default {
       // this.$router.push('/app/contact')
       // 根据命名路由来进行跳转
       this.$router.push({ name: "Tmyself" });
+    },
+    toApp() {
+      // this.$router.push('/app/contact')
+      // 根据命名路由来进行跳转
+      this.$router.push({ name: "App" });
     }
   }
 };
