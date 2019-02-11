@@ -12,11 +12,12 @@ import Tsetting from '../pages/Tsetting.vue'
 import Tuserset from '../pages/Tuserset.vue'
 
 import Tmyself from '../pages/Tmyself.vue'
+// import Tmyself from '../pages/Tmyself.vue'
 
 const routes = [{
     path: '/',
     // 路由命名，方便跳转
-    name: 'app',
+    name: 'App',
     component: App
 },
 {
