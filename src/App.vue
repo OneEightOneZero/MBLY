@@ -2,18 +2,19 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <Xheader/>
+    <Hreg/>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Xheader from './components/Xheader.vue'
+// import Xheader from './components/Xheader.vue'
+import Hreg from './components/Hreg.vue'
 
 export default {
   name: "app",
   components: {
-    Xheader
+      Hreg
   }
 };
 </script>
