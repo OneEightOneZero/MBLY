@@ -2,10 +2,12 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-
+    
     <Xidxheader/>
     <Xidxbanner/>
     <Xidxhottrip/>
+
+    <!-- <Xheader/> -->
 
 
   </div>
@@ -20,6 +22,9 @@ import Xidxhottrip from './components/Xidxhottrip.vue'
 
 
 
+// import Xheader from './components/Xheader.vue'
+
+
 
 export default {
   name: "app",
@@ -29,8 +34,9 @@ export default {
     // HelloWorld
     Xidxheader,
     Xidxbanner,
-    Xidxhottrip
+    Xidxhottrip,
 
+    // Xheader
 
   }
 };

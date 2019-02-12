@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="hot-trips-box">
         <ul class="hot-trips">
             <li class="m-trip-spot">
                 <div class="cover">
@@ -87,6 +87,9 @@
     }
 </script>
 <style type="text/css" scoped>
+    .hot-trips-box{
+        padding-top:13px;
+    }
     .hot-trips{
         padding:15px;
     }
@@ -94,7 +97,7 @@
         position: relative;
         display: block;
         width: 100%;
-        margin-bottom: 23px;
+        margin-bottom: 11px;
         overflow: hidden;
         border-radius: 4px;
     }
@@ -213,5 +216,6 @@
         display: inline-block;
         height: 100%;
         margin: 0 5px;
+        font-style: normal;
     }
 </style>
