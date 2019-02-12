@@ -27,8 +27,6 @@ export default {
     },
     beforeAvatarUpload(file) {
       const isJPG = file.type === "image/jpeg";
-      // 新增图片格式
-      // const isPNG = file.type === "image/png";
       
       const isLt2M = file.size / 1024 / 1024 < 2;
       // console.log(file.type);
