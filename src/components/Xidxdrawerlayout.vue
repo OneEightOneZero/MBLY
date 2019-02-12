@@ -1,7 +1,7 @@
 <template>
     <div class="drawerlayout-content">
         <!-- 用户头像 -->
-        <p class="xie-p8"><div class="user-face"></div></p>
+        <div class="user-face"></div>
         <!-- 用户昵称 -->
         <p class="xie-p8"><a class="user-cure">用户昵称</a></p>
         <!-- 热门游记 -->
