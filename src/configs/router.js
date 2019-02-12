@@ -21,7 +21,7 @@ import Hreg from '../components/Hreg.vue'
 const routes = [{
         path: '/',
         // 路由命名，方便跳转
-        name: 'app',
+        name: 'App',
         component: App
     },
     {

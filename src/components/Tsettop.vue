@@ -6,7 +6,6 @@
         <ul class="select" style="display:none">
           <li @click="toApp">首页</li>
           <li @click="toTmyself">个人中心</li>
-          <li>登录</li>
         </ul>
         <span class="navset">设置</span>
         <div class="tools">
@@ -14,7 +13,7 @@
             <li>我的首页</li>
             <li>退出登录</li>
           </ul>-->
-          <span class="btn-tab">退出登录</span>
+          <span class="btn-tab" @click="toHlogin">登录</span>
         </div>
       </div>
     </div>
@@ -44,6 +43,11 @@ export default {
       // this.$router.push('/app/contact')
       // 根据命名路由来进行跳转
       this.$router.push({ name: "App" });
+    },
+    toHlogin() {
+      // this.$router.push('/app/contact')
+      // 根据命名路由来进行跳转
+      this.$router.push({ name: "Hlogin" });
     }
   }
 };
