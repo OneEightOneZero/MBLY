@@ -2,14 +2,14 @@
     <div class="Xidxbanner">
         <el-carousel height="175px" arrow="never" indicator-position="outside">
             <el-carousel-item v-for="(img,index) in imgList" :key="index" >
-              <!-- <h3>{{ item }}</h3> -->
+              
               <img :src="img.url" width="330px"/>
             </el-carousel-item>
         </el-carousel>
     </div>
 </template>
 <script type="text/javascript">
-// import '../theme/index.css'
+
 export default{
     name:'Xidxbanner',
     data(){

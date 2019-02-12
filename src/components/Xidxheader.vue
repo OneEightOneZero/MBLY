@@ -37,14 +37,6 @@ export default {
     return {
         show:false,
     }
-  },
-//   临时连接了主页，tanweijia修改
-  methods: {
-    toTsetting() {
-      // this.$router.push('/app/contact')
-      // 根据命名路由来进行跳转
-      this.$router.push({ name: "Tsetting" });
-    }
   }
 };
 </script>

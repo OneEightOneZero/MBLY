@@ -10,7 +10,7 @@
       <img v-if="imageUrl" :src="imageUrl" class="avatar">
       <i v-else class="el-icon-plus avatar-uploader-icon" style="line-height: 3.5"></i>
     </el-upload>
-    <button>修改头像</button>
+    <!-- <button>修改头像</button> -->
   </div>
 </template>
 <script>
@@ -27,8 +27,9 @@ export default {
     },
     beforeAvatarUpload(file) {
       const isJPG = file.type === "image/jpeg";
+      
       const isLt2M = file.size / 1024 / 1024 < 2;
-      // console.log(1);
+      // console.log(file.type);
       if (!isJPG) {
         this.$message.error("上传头像图片只能是 JPG 格式!");
       }
