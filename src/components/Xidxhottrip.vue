@@ -7,8 +7,9 @@
           <p
             class="photo"
             lazy="loaded"
-            style ="background: url(http://photos.breadtrip.com/photo_2019_01_26_5e5f4e16eeb6af22dbed3b44ea73b958.jpg?imageView/1/w/640/h/480/q/85)"
+            :style="'background-image:url(\''+n.data[0].cover_image+'\')'"
           ></p>
+          <!-- vue里面背景图的特殊用法 :style="'background-image:url(\''+图片路径+'\')'"-->
         </div>
         <div class="info">
           <!---->
@@ -27,7 +28,7 @@
             <span class="wrapper">
               <b
                 class="avatar"
-                style="background-image: url(&quot;http://photos.breadtrip.com/avatar_9f_4e_20007e10b668f84cd0fdddb70649a23d5382d3d9.jpg-avatar.m&quot;);"
+                :style="'background-image:url(\''+n.data[0].user.avatar_l+'\')'"
               ></b>
               <span class="name">
                 <i>by</i>
@@ -111,7 +112,7 @@ export default {
 .m-trip-spot .cover {
   height: 0;
   padding-bottom: 50.8%;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjYAAAE9CAYAAAAYmShrAAAACXBIW…AQbAAAAMEGAACAYAMAAECwAQAAINgAAAAQbAAAwMb4/wEAyFqzJxbMsuQAAAAASUVORK5CYII=);
+  /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjYAAAE9CAYAAAAYmShrAAAACXBIW…AQbAAAAMEGAACAYAMAAECwAQAAINgAAAAQbAAAwMb4/wEAyFqzJxbMsuQAAAAASUVORK5CYII=); */
   background-repeat: no-repeat;
   background-color: #e7ddc6;
   background-size: cover;

@@ -12,7 +12,6 @@ import Tsetting from '../pages/Tsetting.vue'
 import Tuserset from '../pages/Tuserset.vue'
 
 import Tmyself from '../pages/Tmyself.vue'
-// import Tmyself from '../pages/Tmyself.vue'
 
 import Hlogin from '../components/Hlogin.vue'
 
@@ -21,6 +20,9 @@ import Hreg from '../components/Hreg.vue'
 import Xidxheader from '../components/Xidxheader.vue'
 
 import Xidxsearch from '../pages/Xidxsearch.vue'
+
+// 详情页路由
+import Tdetail from '../components/Tdetail.vue'
 
 
 const routes = [{
@@ -68,6 +70,11 @@ const routes = [{
         // 路由命名，方便跳转
         name: 'Xidxheader',
         component: Xidxheader
+    },{
+        path: '/Tdetail',
+        // 路由命名，方便跳转
+        name: 'Tdetail',
+        component: Tdetail
     }
 ]
 // 实例该路由配置
