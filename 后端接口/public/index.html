@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日日头条</title>
+    <link rel="stylesheet" href="stylesheets/index.css" />
+</head>
+
+<body>
+    <!-- View -->
+    <!-- 头部 -->
+    <header id="indexHeader" class="index--toutiaoribao">
+        <div class="top_bar">
+            <div class="abs_m"><a href="#" class="refresh_title btn"></a>
+                <div class="refreshBtn-container "><i class="refresh_btn"></i></div>
+            </div>
+            <div class="abs_l"><a href="javascript:;" class="msg-box">
+                    <div class="circle"></div>
+                </a></div>
+            <div class="abs_r"><a href="https://m.toutiao.com/search/?need_open_window=1" class="btn search"></a></div>
+        </div>
+    </header>
+    <!-- 导航栏 -->
+    <div class="top_menu_bar ">
+        <div class="top_menu_more">
+            <div class="list_shadow"></div>
+            <a class="more_btn" href="javascript:void(0)">
+                <span class="cross"></span>
+            </a>
+        </div>
+        <div class="top_menu_list">
+            <a @click="changeChannel(index)" v-for="(channel,index) in channels" href="javascript:void(0)" :data-channel="channel.channel" :data-query="`channel=${channel.channel}`"
+                class="btn" :class="{
+                    'cur': index==cur
+                }" v-text="channel.title"></a>
+        </div>
+    </div>
+    <!-- 列表页 -->
+    <content id="pageletListContent" class="feed-list-container">
+        <div class="list_content" data-pull-fresh="1">
+            <section v-for="n in news" class="has_action" data-hot-time="1547515490" data-group-id="6646321188668703240" data-item-id="6646321188668703240"
+                data-format="0"><a href="javascript: void(0)" data-action-label="click_headline" data-tag="news" class="article_link clearfix ">
+                    <div class="item_detail">
+                        <h3 class="dotdot line3" v-text="n.title"></h3>
+                        <div class="item_info">
+                            <div><span class="stick_label space">置顶</span>0
+                                <span class="src space" v-text="n.source"></span><span class="cmt space" v-text="`评论${n.comment_count}`">
+                                </span><span class="time" title="2019-01-15 09:24">10分钟前</span><span data-id="6646321188668703240"
+                                    class="dislike-news fr"></span></div>
+                        </div>
+                    </div>
+                </a>
+            </section>
+        </div>
+    </content>
+    <script src="javascripts/vue.js"></script>
+    <script src="javascripts/axios.js"></script>
+    <script src="javascripts/index.js"></script>
+</body>
+
+</html>

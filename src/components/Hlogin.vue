@@ -28,7 +28,7 @@
         </div>
         <div class="btn-wrapper">
           <div class="m-account-btn transparent">
-            <span>立即登录</span>
+            <span @click="toApp">立即登录</span>
           </div>
         </div>
       </div>
@@ -42,6 +42,11 @@ export default {
       // this.$router.push('/app/contact')
       // 根据命名路由来进行跳转
       this.$router.push({ name: "Hreg" });
+    },
+    toApp() {
+      // this.$router.push('/app/contact')
+      // 根据命名路由来进行跳转
+      this.$router.push({ name: "App" });
     }
   }
 };

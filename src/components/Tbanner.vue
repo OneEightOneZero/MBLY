@@ -11,21 +11,21 @@
           <div class="avatar-wrapper">
             <div class="avatar">
               <div class="likes">
-                <p>0</p>粉丝
+                <p>33</p>粉丝
               </div>
               <span
                 class="m-avatar"
                 style="background-image: url(&quot;http://photos.breadtrip.com/avatar_b5_3d_c66eec71eeb35d5790f78a0596daa4890c4faba4.jpg-avatar.m&quot;);"
               ></span>
               <div class="follows">
-                <p>1</p>关注
+                <p>66</p>关注
               </div>
             </div>
           </div>
-          <div class="level">Lv.1</div>
+          <div class="level">Lv.99</div>
         </div>
         <div class="middle">
-          <h2 class="ellipsis">城春草木深</h2>
+          <h2 class="ellipsis">lemon</h2>
           <p class="ellipsis"></p>
         </div>
         <div class="btns">
