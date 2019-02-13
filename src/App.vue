@@ -3,6 +3,7 @@
     <Xidxheader/>
     <Xidxbanner/>
     <Xidxhottrip/>
+    <Xidxwrite/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Xidxheader from './components/Xidxheader.vue'
 import Xidxbanner from './components/Xidxbanner.vue'
 import Xidxhottrip from './components/Xidxhottrip.vue'
+import Xidxwrite from './components/Xidxwrite.vue'
 
 export default {
   name: "app",
@@ -17,6 +19,7 @@ export default {
     Xidxheader,
     Xidxbanner,
     Xidxhottrip,
+    Xidxwrite
   }
 };
 </script>
