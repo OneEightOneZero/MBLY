@@ -107,11 +107,16 @@
         </div>
       </li>
     </ul>
+    <Xloading/>
   </div>
 </template>
 <script type="text/javascript">
+import Xloading from "./Xloading.vue"
 export default {
-  name: "Xidxhottrip"
+  name: "Xidxhottrip",
+  components:{
+    Xloading
+  }
 };
 </script>
 <style type="text/css" scoped>

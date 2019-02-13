@@ -3,7 +3,6 @@
     <Xidxheader/>
     <Xidxbanner/>
     <Xidxhottrip/>
-    <Xloading/>
   </div>
 </template>
 
@@ -11,7 +10,6 @@
 import Xidxheader from './components/Xidxheader.vue'
 import Xidxbanner from './components/Xidxbanner.vue'
 import Xidxhottrip from './components/Xidxhottrip.vue'
-import Xloading from './components/Xloading.vue'
 
 export default {
   name: "app",
@@ -19,7 +17,6 @@ export default {
     Xidxheader,
     Xidxbanner,
     Xidxhottrip,
-    Xloading
   }
 };
 </script>

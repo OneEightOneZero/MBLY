@@ -30,6 +30,7 @@
 
 <script>
   export default {
+    name:"Xloading",
     data() {
       return {
         tableData: [{
