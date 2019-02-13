@@ -11,24 +11,24 @@
           </div>
           <div class="phone-wrapper input-wrapper">
             <label code="+86"></label>
-            <input type="text" autocapitalize="off" placeholder="请填写手机号码">
+            <input type="text" autocapitalize="off" placeholder="请填写手机号码"  v-model="name">
           </div>
         </div>
         <div class="m-account-input">
-          <input type="password" autocapitalize="off" placeholder="输入登录密码，至少6位">
+          <input type="password" autocapitalize="off" placeholder="输入登录密码，至少6位" v-model="password">
         </div>
         <div class="m-account-captcha">
           <input type="text" autocapitalize="off" placeholder="验证码">
-          <img
-            src="http://web.breadtrip.com/captcha.jpg?1549884654821"
+          <!-- <img
+             src="http://web.breadtrip.com/captcha.jpg?1549884654821" 
             height="60%"
             alt="loading"
             class="captcha"
-          >
+          > -->
         </div>
         <div class="btn-wrapper">
           <div class="m-account-btn transparent">
-            <span>立即登录</span>
+            <span @click="login()" >立即登录</span>
           </div>
         </div>
       </div>
@@ -37,13 +37,38 @@
 </template>
 <script>
 export default {
+    data(){
+        return{
+            msg: "登录注册",
+            name: '',
+            password: '',
+            nameId: "",
+            showID: false,
+            array: [],
+            showAll: false
+        }
+    },
   methods: {
     toHreg() {
       // this.$router.push('/app/contact')
       // 根据命名路由来进行跳转
       this.$router.push({ name: "Hreg" });
-    }
+    },
+     login(){
+            let name = this.name
+           let password = this.password
+            if(name===""||password===""){
+               alert("账号或密码不能为空！")
+            }
+           
+           if(name&&password){
+         alert("注册成功！")
+         this.$router.push({ name: "APP" });
+           }
+        }
+  
   }
+  
 };
 </script>
 <style scoped>
