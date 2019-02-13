@@ -28,7 +28,7 @@
         </div>
         <div class="btn-wrapper">
           <div class="m-account-btn transparent">
-            <span @click="login()" >立即登录</span>
+            <span @click="login" >立即登录</span>
           </div>
         </div>
       </div>
@@ -62,8 +62,8 @@ export default {
             }
            
            if(name&&password){
-         alert("注册成功！")
-         this.$router.push({ name: "APP" });
+        //  alert("注册成功！")
+         this.$router.push({ name: "App" });
            }
         }
   
