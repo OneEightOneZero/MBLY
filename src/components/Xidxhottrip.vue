@@ -1,106 +1,37 @@
 <template>
   <div class="hot-trips-box">
     <ul class="hot-trips">
-      <li class="m-trip-spot">
+      <li class="m-trip-spot" 
+       v-for="(n,index) in news" :key="index">
         <div class="cover">
           <p
             class="photo"
             lazy="loaded"
-            style="background-image: url(&quot;http://photos.breadtrip.com/photo_2019_01_09_aaa5bae463af95c3285c01cd9ce970ed.jpg?imageView/2/w/1384/h/1384/q/85&quot;);"
+            style ="background: url(http://photos.breadtrip.com/photo_2019_01_26_5e5f4e16eeb6af22dbed3b44ea73b958.jpg?imageView/1/w/640/h/480/q/85)"
           ></p>
         </div>
         <div class="info">
           <!---->
-          <h2 class="m-trip-title">柬埔寨🇰🇭，不止于吴哥</h2>
+          <h2 class="m-trip-title" v-text="n.data[0].name"></h2>
           <h3 class="m-trip-detail">
             <span class="day">
-              2018.9.27&nbsp;&nbsp;
-              8天&nbsp;&nbsp; 2.0万浏览&nbsp;&nbsp;
+              {{n.data[0].first_day}}&nbsp;&nbsp;
+              {{n.data[0].day_count}}天&nbsp;&nbsp; {{n.data[0].view_count}}浏览&nbsp;&nbsp;
               <!---->
             </span>
             <br>
-            <span class="local">柬埔寨,暹粒市</span>
+            <span class="local" v-text="n.data[0].popular_place_str"></span>
           </h3>
           <p class="m-trip-bottom">
             <!---->
             <span class="wrapper">
               <b
                 class="avatar"
-                style="background-image: url(&quot;http://photos.breadtrip.com/avatar_5e_8a_dc74679c972c6305dbfb4c303cef27c839e9f238.jpg-avatar.m&quot;);"
+                style="background-image: url(&quot;http://photos.breadtrip.com/avatar_9f_4e_20007e10b668f84cd0fdddb70649a23d5382d3d9.jpg-avatar.m&quot;);"
               ></b>
               <span class="name">
                 <i>by</i>
-                Vivian_W
-              </span>
-            </span>
-          </p>
-        </div>
-      </li>
-      <li class="m-trip-spot">
-        <div class="cover">
-          <p
-            class="photo"
-            lazy="loaded"
-            style="background-image: url(&quot;http://photos.breadtrip.com/photo_2019_01_26_5e5f4e16eeb6af22dbed3b44ea73b958.jpg?imageView/1/w/640/h/480/q/85&quot;);"
-          ></p>
-        </div>
-        <div class="info">
-          <!---->
-          <h2 class="m-trip-title">冬日·北海道</h2>
-          <h3 class="m-trip-detail">
-            <span class="day">
-              2019.1.22&nbsp;&nbsp;
-              8天&nbsp;&nbsp; 2.4万浏览&nbsp;&nbsp;
-              <!---->
-            </span>
-            <br>
-            <span class="local">日本,洞爷湖町</span>
-          </h3>
-          <p class="m-trip-bottom">
-            <!---->
-            <span class="wrapper">
-              <b
-                class="avatar"
-                style="background-image: url(&quot;http://photos.breadtrip.com/avatar_a3_e5_f37c843a47d9eb465659992fcb384937a8828f17.jpg-avatar.m&quot;);"
-              ></b>
-              <span class="name">
-                <i>by</i>
-                艾的这一页
-              </span>
-            </span>
-          </p>
-        </div>
-      </li>
-      <li class="m-trip-spot">
-        <div class="cover">
-          <p
-            class="photo"
-            lazy="loaded"
-            style="background-image: url(&quot;http://photos.breadtrip.com/covers_2018_05_09_c787f8585e2b0da9c6aae527a45d7a94.jpg?imageView/2/w/960/&quot;);"
-          ></p>
-        </div>
-        <div class="info">
-          <!---->
-          <h2 class="m-trip-title">以色列自驾游🇮🇱</h2>
-          <h3 class="m-trip-detail">
-            <span class="day">
-              2018.2.10&nbsp;&nbsp;
-              13天&nbsp;&nbsp; 6.3万浏览&nbsp;&nbsp;
-              <!---->
-            </span>
-            <br>
-            <span class="local">以色列,耶路撒冷</span>
-          </h3>
-          <p class="m-trip-bottom">
-            <!---->
-            <span class="wrapper">
-              <b
-                class="avatar"
-                style="background-image: url(&quot;http://photos.breadtrip.com/avatar_fe_6a_55396e739f2ab8ad59adc8f5dcfc139e.jpg-avatar.m&quot;);"
-              ></b>
-              <span class="name">
-                <i>by</i>
-                键盘与面包
+                {{n.data[0].user.name}}
               </span>
             </span>
           </p>
@@ -116,7 +47,30 @@ export default {
   name: "Xidxhottrip",
   components:{
     Xloading
+  },
+  //新增数据接口=====
+  // M
+  data() {
+    return {
+      // 存放新闻数据
+      news: []
+    };
+  },
+  methods: {
+    // 获取数据的方法
+    async getNews() {
+      let data = await this.$axios.get("http://localhost:3000/news");
+      for (var i=7;i<data.data.data.length;i++) {
+        // console.log(data.data.data[i]);
+        this.news = this.news.concat(data.data.data[i]);
+      }
+    }
+  },
+  created() {
+    // 触发getNews方法
+    this.getNews();
   }
+  // =====
 };
 </script>
 <style type="text/css" scoped>

@@ -18,8 +18,13 @@ export default {
   components: {
     Xidxheader,
     Xidxbanner,
+<<<<<<< HEAD
     Xidxhottrip,
     Xidxwrite
+=======
+    Xidxhottrip
+
+>>>>>>> b66a5f382a31458ecf111b77a556cace59507c2d
   }
 };
 </script>
