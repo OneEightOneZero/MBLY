@@ -18,6 +18,9 @@ import Hlogin from '../components/Hlogin.vue'
 
 import Hreg from '../components/Hreg.vue'
 
+import Xidxsearch from '../pages/Xidxsearch.vue'
+
+
 const routes = [{
         path: '/',
         // 路由命名，方便跳转
@@ -52,7 +55,12 @@ const routes = [{
         // 路由命名，方便跳转
         name: 'Hreg',
         component: Hreg
-    },
+    },{
+        path: '/Xidxsearch',
+        // 路由命名，方便跳转
+        name: 'Xidxsearch',
+        component: Xidxsearch
+    }
 ]
 // 实例该路由配置
 const router = new VueRouter({

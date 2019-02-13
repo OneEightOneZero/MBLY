@@ -2,8 +2,7 @@
     <div class="Xidxbanner">
         <el-carousel height="175px" arrow="never" indicator-position="outside">
             <el-carousel-item v-for="(img,index) in imgList" :key="index" >
-              
-              <img :src="img.url" width="330px"/>
+              <img :src="img.url" width="100%" height="100%" />
             </el-carousel-item>
         </el-carousel>
     </div>

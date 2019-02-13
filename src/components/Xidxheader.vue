@@ -17,7 +17,7 @@
               <!-- 头部导航 -->
               <header class="x-bar mui-bar-nav">
                 <i class="iconfont icon-daohang x-pull-left" @click="show=!show"></i>
-                <i class="iconfont icon-search x-pull-right"></i>
+                <i class="iconfont icon-search x-pull-right" @click="toSearch"></i>
                 <h1 class="x-title">breadtrip</h1>
               </header>
             </div>
@@ -37,10 +37,15 @@ export default {
     return {
         show:false,
     }
+  },
+  methods:{
+    toSearch() {
+        this.$router.push({name:"Xidxsearch"})
+    }
   }
 };
 </script>
-<style type="text/css" scoped>
+<style type="text/css">
 .m-top-nav {
   position: fixed;
   top: 0;

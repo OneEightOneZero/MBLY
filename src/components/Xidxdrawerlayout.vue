@@ -28,7 +28,7 @@
 <style type="text/css" scoped>
     .drawerlayout-content{
         width:100%;
-        padding-top: 50px;
+        margin-top: 50px;
     }
     .xie-p8{
         padding:8px;
