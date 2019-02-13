@@ -36,7 +36,7 @@ export default{
 </script>
 <style type="text/css" scoped>
 .Xidxbanner{
-    margin:60px 15px 0px;
+    padding:60px 15px 0px;
     height:175px !important;
 }
 
