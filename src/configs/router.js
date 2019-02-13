@@ -18,6 +18,8 @@ import Hlogin from '../components/Hlogin.vue'
 
 import Hreg from '../components/Hreg.vue'
 
+import Xidxheader from '../components/Xidxheader.vue'
+
 import Xidxsearch from '../pages/Xidxsearch.vue'
 
 
@@ -60,6 +62,12 @@ const routes = [{
         // 路由命名，方便跳转
         name: 'Xidxsearch',
         component: Xidxsearch
+    }
+    ,{
+        path: '/Xidxheader',
+        // 路由命名，方便跳转
+        name: 'Xidxheader',
+        component: Xidxheader
     }
 ]
 // 实例该路由配置
