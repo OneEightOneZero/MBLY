@@ -15,7 +15,7 @@ export default {
   },
 
   methods: {
-    handleChange(value){}
+    // handleChange(value){}
   }
 };
 </script>
