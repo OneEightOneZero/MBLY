@@ -9,7 +9,7 @@
             style="background-image: url(&quot;http://photos.breadtrip.com/photo_2019_01_09_aaa5bae463af95c3285c01cd9ce970ed.jpg?imageView/2/w/1384/h/1384/q/85&quot;);"
           ></p>
         </div>
-        <div class="info">
+        <div  class="info">
           <!---->
           <h2 class="m-trip-title">柬埔寨🇰🇭，不止于吴哥</h2>
           <h3 class="m-trip-detail">
@@ -111,7 +111,14 @@
 </template>
 <script type="text/javascript">
 export default {
-  name: "Xidxhottrip"
+  name: "Xidxhottrip",
+  methods: {
+    toHxiangqing() {
+      // this.$router.push('/app/contact')
+      // 根据命名路由来进行跳转
+      this.$router.push({ name: "Hxiangqing" });
+    },
+  },
 };
 </script>
 <style type="text/css" scoped>

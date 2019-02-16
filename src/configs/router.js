@@ -22,7 +22,6 @@ import Xidxheader from '../components/Xidxheader.vue'
 
 import Xidxsearch from '../pages/Xidxsearch.vue'
 
-
 const routes = [{
         path: '/',
         // 路由命名，方便跳转
@@ -69,6 +68,7 @@ const routes = [{
         name: 'Xidxheader',
         component: Xidxheader
     }
+   
 ]
 // 实例该路由配置
 const router = new VueRouter({

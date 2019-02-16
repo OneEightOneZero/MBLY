@@ -17,6 +17,8 @@ Vue.use(ElementUI);
 import 'weui'
 // 引入ajax库
 import axios from 'axios'
+import qs from 'qs';
+Vue.prototype.$qs = qs;
 // 引入jQuery库
 import $ from 'jquery'  
 
