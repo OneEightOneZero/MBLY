@@ -46,10 +46,34 @@
 import Xloading from "./Xloading.vue"
 export default {
   name: "Xidxhottrip",
-  methods: {
+  components:{
+    Xloading
   },
+  //新增数据接口=====
+  // M
+  data() {
+    return {
+      // 存放新闻数据
+      news: []
+    };
+  },
+  methods: {
+    // 获取数据的方法
+    async getNews() {
+      let data = await this.$axios.get("http://localhost:3000/news");
+      for (var i=7;i<data.data.data.length;i++) {
+        // console.log(data.data.data[i]);
+        this.news = this.news.concat(data.data.data[i]);
+      }
+    }
+  },
+  created() {
+    // 触发getNews方法
+    this.getNews();
+  }
 };
 </script>
+
 <style type="text/css" scoped>
 .hot-trips-box {
   padding-top: 13px;
