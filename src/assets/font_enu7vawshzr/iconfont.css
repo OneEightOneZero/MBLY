@@ -25,6 +25,8 @@
 
 .icon-add:before {
   content: "\e62b";
+  width:0px;
+  display:block;
 }
 
 .icon-compile:before {
