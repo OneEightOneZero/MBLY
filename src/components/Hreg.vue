@@ -80,7 +80,7 @@ export default {
           url: "http://localhost:3000/users/insert",
           data: postData
         }).then(res => {
-          console.log(res.data.status);
+          // console.log(res.data.status);
           if (res.data.status === "用户名已存在") {
             alert("用户名已存在")
            
@@ -89,9 +89,6 @@ export default {
             this.$router.push({ name: "Hlogin" });
           }
         });
-
-         alert("注册成功！")
-         this.$router.push({ name: "Hlogin" });
       }
     }
   }

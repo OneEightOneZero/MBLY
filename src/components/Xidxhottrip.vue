@@ -46,42 +46,8 @@
 import Xloading from "./Xloading.vue"
 export default {
   name: "Xidxhottrip",
-<<<<<<< HEAD
   methods: {
-    toHxiangqing() {
-      // this.$router.push('/app/contact')
-      // 根据命名路由来进行跳转
-      this.$router.push({ name: "Hxiangqing" });
-    },
   },
-=======
-  components:{
-    Xloading
-  },
-  //新增数据接口=====
-  // M
-  data() {
-    return {
-      // 存放新闻数据
-      news: []
-    };
-  },
-  methods: {
-    // 获取数据的方法
-    async getNews() {
-      let data = await this.$axios.get("http://localhost:3000/news");
-      for (var i=7;i<data.data.data.length;i++) {
-        // console.log(data.data.data[i]);
-        this.news = this.news.concat(data.data.data[i]);
-      }
-    }
-  },
-  created() {
-    // 触发getNews方法
-    this.getNews();
-  }
-  // =====
->>>>>>> 7250987d727d12730fd400a2095a52e2d6816b5a
 };
 </script>
 <style type="text/css" scoped>

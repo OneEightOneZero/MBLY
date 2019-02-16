@@ -21,13 +21,8 @@ import Xidxheader from '../components/Xidxheader.vue'
 
 import Xidxsearch from '../pages/Xidxsearch.vue'
 
-<<<<<<< HEAD
-=======
-// 详情页路由
 import Tdetail from '../components/Tdetail.vue'
 
-
->>>>>>> 7250987d727d12730fd400a2095a52e2d6816b5a
 const routes = [{
         path: '/',
         // 路由命名，方便跳转
